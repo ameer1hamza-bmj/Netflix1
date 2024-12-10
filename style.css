@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Ubuntu&display=swap');
+body {
+    background-color: #0E080A;
+}
+/* *{
+    /* font-family: "Roboto", sans-serif; */
+    /* font-family: "Ubuntu", sans-serif; */
+    /* font-family: "poppins", sans-serif; */
+
+/* }  */
+
+.nav1 {
+    height: 80px;
+}
+
+.nav2 {
+    height: 100%;
+}
+
+.nav3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.nav3 a {
+    color: black; /* Adjust text color */
+}
+
+.img1 {
+    width: 220px;
+}
+
+.hero {
+    height: 600px;
+    width: 100%;
+    background: url(images/bg.jpg) no-repeat center;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+   
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: 1px;
+
+    /* Shadows */
+    box-shadow: 
+        inset 0px -150px 20px rgba(255, 255, 255, 0.309), /* Inside shadow */
+        0px 0px 105px rgba(160, 84, 96, 0.72);           /* Outside shadow */
+        cursor: default;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Transparency layer */
+    z-index: 1;
+    border-radius: 25px;
+    border: 1px solid;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.head {
+    height: 350px;
+    color: white;
+    background: none;
+    z-index: 2; /* Ensures content is above shadows and overlay */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.head h1{
+    font-size: 4rem;
+    font-weight: bolder;
+    font-family:  "Ubuntu",sans-serif;
+}
+.head p{
+ 
+    font-size: 1.4rem;
+    font-family: "poppins", sans-serif;
+    font-weight:400;
+}
+.membership{
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.membership p{
+    color: rgb(181, 177, 177);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.get{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.emailform{
+    width: 400px;
+    margin-right: -80px;
+    border-radius: 35px;
+    height: 60px;
+    background-color: transparent;
+    color: #FF69B4;
+}
+/* Placeholder Color */
+.emailform::placeholder {
+    color: #FF69B4; /* Set your desired color for placeholder */
+    opacity: 1; /* Ensure full opacity */
+    
+    background-color: transparent;
+}
+
+/* On Focus, Change Background Color */
+.emailform:focus {
+    
+    background-color: transparent; /* Set background color to white */
+    outline: none; /* Remove default focus outline */
+    border-color: #FF69B4; /* Optional: Change border color on focus */
+}
+.get1{
+    height: 100px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+.get1 a{
+    background-color: #E50914;
+    border: none;
+    margin-left: 70px;
+    color: white;
+    padding: 18px 45px;
+}
+.get1 a i{
+    padding-left: 10px;
+}
+.get1 a:hover{
+    background-color: #CF0E17;
+    color: white;
+}
+.trending{
+    height: 50px;
+    color: white;
+}
+.trendhead{
+    font-family:"Ubuntu",sans-serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.trendslide{
+    height: 300px;
+
+}
+.carddiv {
+    display: flex;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    gap: 10px; /* Space between cards */
+    padding: 10px;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    height: 100%;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.carddiv::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+.card {
+    flex: 0 0 auto; /* Prevent shrinking of cards */
+    width: 200px;
+    height: 250px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.10); /* Enlarge card on hover */
+}
+
+/* Scroll buttons */
+.scroll-left, .scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 150px; /* Reduce card size for smaller screens */
+        height: 200px;
+    }
+
+    .scroll-left,
+    .scroll-right {
+        padding: 5px 10px; /* Adjust button size */
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 120px; /* Further reduce card size */
+        height: 180px;
+    }
+
+    .scroll-left,
+    .scroll-right {
+        display: none; /* Hide buttons for very small screens */
+    }
+
+    .carddiv {
+        gap: 5px; /* Reduce gap between cards */
+        padding: 5px;
+    }
+    .carousel-btn {
+        padding: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Styles */
+@media (max-width:576px) {
+    .img1 {
+        width: 150px;
+    }
+
+    .hero {
+        height: 400px; /* Adjust height for smaller screens */
+        box-shadow: 
+            inset 0px -100px 15px rgba(255, 255, 255, 0.309), /* Inside shadow */
+            0px 0px 70px rgba(160, 84, 96, 0.72);           /* Outside shadow */
+    }
+    .head {
+        height: 400px;
+        color: white;
+        background: none;
+        z-index: 2; /* Ensures content is above shadows and overlay */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    
+    }
+    .head h1{
+        font-size: 2rem;
+        font-weight: bolder;
+        font-family:  "Ubuntu",sans-serif;
+    }
+    .head p{
+     
+        font-size: 1rem;
+        font-family: "poppins", sans-serif;
+        font-weight:400;
+    }
+    .membership{
+        height: 80px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .membership p{
+        color: rgb(181, 177, 177);
+        font-size: 0.99rem;
+        font-weight: 600;
+    }
+    .get{
+        height: 70px;
+      
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .emailform{
+        width: 100%;
+        border-radius: 25px;
+        height: 60px;
+        background-color: transparent;
+        margin-right: 0;
+    }
+    .get1{
+        height: 80px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .get1 a{
+        background-color: #E50914;
+        border: none;
+        color: white;
+        padding: 15px 45px;
+        margin-left: 0;
+        
+    }
+    .get1 a i{
+        padding-left: 10px;
+    }
+    .get1 a:hover{
+        background-color: #CF0E17;
+        color: white;
+    }
+    .trendhead{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        
+    }
+    .trendhead h1{
+        font-size: 2.2rem;
+font-family: "Ubuntu", sans-serif;
+    }
+    .trending{
+        height: 20px;
+    }
+    
+}
