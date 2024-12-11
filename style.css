@@ -98,6 +98,7 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    
 }
 .membership p{
     color: rgb(181, 177, 177);
@@ -109,6 +110,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
 }
 .emailform{
     width: 400px;
@@ -117,6 +119,7 @@ body {
     height: 60px;
     background-color: transparent;
     color: #FF69B4;
+   
 }
 /* Placeholder Color */
 .emailform::placeholder {
@@ -179,6 +182,8 @@ body {
     height: 100%;
     align-items: center;
     /* justify-content: center; */
+    border-radius: 25px;
+
 }
 
 .carddiv::-webkit-scrollbar {
@@ -227,8 +232,8 @@ body {
 }
 .boxes{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content:space-between;
     height: 250px;
    
 }
@@ -236,7 +241,7 @@ body {
     height: 140px;
     width: 250px;
     border: 2px solid #313030;
-   margin: 0px 10px;
+   /* margin: 0px 5px; */
    background-color: #272727;
    border-radius: 25px;
    display: flex;
@@ -269,7 +274,18 @@ body {
  padding-right: 5px;
  padding-bottom: 5px;
 }
-
+.accordion-item{
+    background-color: #212529;
+}
+.accordion-header{
+    background-color: #212529;
+    
+}
+.accordion-button{
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: "Ubantu", ;
+}
 
 
 
