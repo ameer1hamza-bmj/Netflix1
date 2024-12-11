@@ -150,6 +150,8 @@ body {
     margin-left: 70px;
     color: white;
     padding: 18px 45px;
+    transition: all 0.7s ease;
+    text-shadow: 0px 0px 3px white;
 }
 .get1 a i{
     padding-left: 10px;
@@ -284,11 +286,49 @@ body {
 .accordion-button{
     font-size: 1.1rem;
     font-weight: bold;
-    font-family: "Ubantu", ;
+    font-family: "Ubantu", sans-serif;
+}
+.padd{
+    padding-top: 30px;
+}
+.btn-get{
+    background-color: #E50914;
+    color: white;
+    padding: 10px 35px;
+    font-weight: 500;
+    font-family: "Roboto";
+    text-shadow: 0px 0px 3px white;
+    transition: all 0.5s ease;
+    
+}
+.btn-get:hover{
+    background-color: #C11119;
+    color: white;
+    padding: 10px 35px;
+    text-shadow: 0px 0px 4px white;
 }
 
+.get-p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: "Ubantu", sans-serif;
+}
+.container{
+animation: scroll linear;
+animation-timeline: view();
+animation-range: entry 0% cover 40%;
+}
 
-
+@keyframes scroll {
+    from{
+opacity: 0;
+scale: 0.5;
+    }
+    to{
+opacity: 1;
+scale: 1;
+    }
+}
 
 
 
@@ -447,7 +487,7 @@ body {
      width: 70px;
      border-radius: 100%;
     }
-
+    
 }
 
 
@@ -611,4 +651,34 @@ font-family: "Ubuntu", sans-serif;
      width: 70px;
      border-radius: 100%;
     }
+    .padd{
+        padding-top: 30px;
+    }
+    .btn-get{
+        background-color: #E50914;
+        color: white;
+        padding: 10px 35px;
+        font-weight: 500;
+        font-family: "Roboto";
+        text-shadow: 0px 0px 3px white;
+        transition: all 0.5s ease;
+        
+    }
+    .btn-get:hover{
+        background-color: #C11119;
+        color: white;
+        padding: 10px 35px;
+        text-shadow: 0px 0px 4px white;
+    }
+    
+    .get-p{
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-family: "Ubantu", sans-serif;
+    }
+    .container{
+        animation: scroll linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 30%;
+        }
 }
